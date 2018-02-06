@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9E5B2B4BA48B2DE4BF3C7B /* Pods_LBTAComponentsMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE99C6F5C951404AF91EE68 /* Pods_LBTAComponentsMagic.framework */; };
 		C9E11C75202980FB00680855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E11C74202980FB00680855 /* AppDelegate.swift */; };
 		C9E11C77202980FB00680855 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E11C76202980FB00680855 /* ViewController.swift */; };
 		C9E11C7A202980FB00680855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E11C78202980FB00680855 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FE99C6F5C951404AF91EE68 /* Pods_LBTAComponentsMagic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LBTAComponentsMagic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E11C71202980FB00680855 /* LBTAComponentsMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBTAComponentsMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E11C74202980FB00680855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E11C76202980FB00680855 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		C9E11C7B202980FB00680855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9E11C7E202980FB00680855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9E11C80202980FB00680855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB2E6249098EBE3EA0BAD90B /* Pods-LBTAComponentsMagic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTAComponentsMagic.release.xcconfig"; path = "Pods/Target Support Files/Pods-LBTAComponentsMagic/Pods-LBTAComponentsMagic.release.xcconfig"; sourceTree = "<group>"; };
+		F34E40FEC660149B3AA5FF8D /* Pods-LBTAComponentsMagic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBTAComponentsMagic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBTAComponentsMagic/Pods-LBTAComponentsMagic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9E5B2B4BA48B2DE4BF3C7B /* Pods_LBTAComponentsMagic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B94CDC477D9340D311400A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F34E40FEC660149B3AA5FF8D /* Pods-LBTAComponentsMagic.debug.xcconfig */,
+				CB2E6249098EBE3EA0BAD90B /* Pods-LBTAComponentsMagic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1E0DB6ABF26470EB4104DD4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FE99C6F5C951404AF91EE68 /* Pods_LBTAComponentsMagic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9E11C68202980FB00680855 = {
 			isa = PBXGroup;
 			children = (
 				C9E11C73202980FB00680855 /* LBTAComponentsMagic */,
 				C9E11C72202980FB00680855 /* Products */,
+				05B94CDC477D9340D311400A /* Pods */,
+				1E0DB6ABF26470EB4104DD4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9E11C83202980FB00680855 /* Build configuration list for PBXNativeTarget "LBTAComponentsMagic" */;
 			buildPhases = (
+				747DE48A0CF50F3251673229 /* [CP] Check Pods Manifest.lock */,
 				C9E11C6D202980FB00680855 /* Sources */,
 				C9E11C6E202980FB00680855 /* Frameworks */,
 				C9E11C6F202980FB00680855 /* Resources */,
+				DBE7FC40690686E25173473D /* [CP] Embed Pods Frameworks */,
+				55DBBA7FF3F3F334096D559D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55DBBA7FF3F3F334096D559D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBTAComponentsMagic/Pods-LBTAComponentsMagic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		747DE48A0CF50F3251673229 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LBTAComponentsMagic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE7FC40690686E25173473D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LBTAComponentsMagic/Pods-LBTAComponentsMagic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LBTAComponentsMagic/Pods-LBTAComponentsMagic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9E11C6D202980FB00680855 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		C9E11C84202980FB00680855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F34E40FEC660149B3AA5FF8D /* Pods-LBTAComponentsMagic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		C9E11C85202980FB00680855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2E6249098EBE3EA0BAD90B /* Pods-LBTAComponentsMagic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
