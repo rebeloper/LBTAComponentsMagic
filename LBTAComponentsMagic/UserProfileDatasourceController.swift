@@ -36,7 +36,8 @@ class UserProfileDatasourceController: DatasourceController {
   
   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let largeImageController = LargeImageController()
-    largeImageController.imageName = userProfileDatasource.posts[indexPath.row].imageName
+//    largeImageController.imageName = userProfileDatasource.posts[indexPath.row].imageName
+    largeImageController.imagUrl = userProfileDatasource.posts[indexPath.row].imageUrl
     navigationController?.pushViewController(largeImageController, animated: true)
   }
   

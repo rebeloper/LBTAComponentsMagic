@@ -26,8 +26,32 @@ class UserProfileDatasource: Datasource {
   }
   
   func fetchUserAndPosts(in collectionViewController: DatasourceController) {
-    for i in 1...17 {
-      let post = Post(imageName: "Image\(i)")
+    
+    let urls = ["http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-45-for-iPhoneX.jpg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-2-for-iPhone-X.png",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-11-for-iPhone-X.png",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-14-for-iPhone-X.png",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-15-for-iPhone-X.png",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-16-for-iPhone-X.png",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-20-for-iPhone-X.png",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-18-for-iPhone-X.jpg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-23-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-25-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-26-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-28-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-29-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-32-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-35-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-37-for-iPhone-X.jpeg",
+                "http://media.idownloadblog.com/wp-content/uploads/2017/11/iOS-stock-41-for-iPhone-X.jpeg"]
+    
+//    for i in 1...17 {
+//      let post = Post(imageName: "Image\(i)")
+//      posts.append(post)
+//    }
+    
+    for url in urls {
+      let post = Post(imageUrl: url)
       posts.append(post)
     }
     fetchCurrentUser()

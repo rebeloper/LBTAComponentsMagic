@@ -11,10 +11,16 @@ import LBTAComponents
 
 class LargeImageController: UIViewController {
   
-  var imageName: String?
+//  var imageName: String?
+  var imagUrl: String?
   
-  let imageView: UIImageView = {
-    let iv = UIImageView()
+//  let imageView: UIImageView = {
+//    let iv = UIImageView()
+//    return iv
+//  }()
+  
+  let imageView: CachedImageView = {
+    let iv = CachedImageView()
     return iv
   }()
   
@@ -22,7 +28,8 @@ class LargeImageController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .purple
     setupViews()
-    loadImage(imageName)
+//    loadImage(imageName)
+    loadImageWithUrl(imagUrl)
   }
   
   fileprivate func setupViews() {
@@ -30,8 +37,25 @@ class LargeImageController: UIViewController {
     imageView.fillSuperview()
   }
   
-  func loadImage(_ named: String?) {
-    guard let named = named else { return }
-    imageView.image = UIImage(named: named)
+//  func loadImage(_ named: String?) {
+//    guard let named = named else { return }
+//    imageView.image = UIImage(named: named)
+//  }
+  
+  func loadImageWithUrl(_ url: String?) {
+    guard let url = url else { return }
+    imageView.loadImage(urlString: url)
   }
+
 }
+
+
+
+
+
+
+
+
+
+
+

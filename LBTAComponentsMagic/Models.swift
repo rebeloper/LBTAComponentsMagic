@@ -9,10 +9,16 @@
 import Foundation
 
 struct Post {
-  let imageName: String
+//  let imageName: String
+//
+//  init(imageName: String) {
+//    self.imageName = imageName
+//  }
   
-  init(imageName: String) {
-    self.imageName = imageName
+  let imageUrl: String
+  
+  init(imageUrl: String) {
+    self.imageUrl = imageUrl
   }
 }
 

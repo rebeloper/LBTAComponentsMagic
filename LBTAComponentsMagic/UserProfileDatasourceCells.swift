@@ -13,14 +13,30 @@ class UserProfileDatasourceCell: DatasourceCell {
   override var datasourceItem: Any? {
     didSet {
       guard let post = datasourceItem as? Post else { return }
-      imageView.image = UIImage(named: post.imageName)
+//      imageView.image = UIImage(named: post.imageName)
+      imageView.loadImage(urlString: post.imageUrl) {
+        // stop animating the activity
+        self.activityIndicatorView.stopAnimating()
+      }
     }
   }
   
-  let imageView: UIImageView = {
-    let iv = UIImageView()
+//  let imageView: UIImageView = {
+//    let iv = UIImageView()
+//    iv.contentMode = .scaleAspectFill
+//    return iv
+//  }()
+  
+  let imageView: CachedImageView = {
+    let iv = CachedImageView()
     iv.contentMode = .scaleAspectFill
     return iv
+  }()
+  
+  let activityIndicatorView: UIActivityIndicatorView = {
+    let aiv = UIActivityIndicatorView()
+    aiv.startAnimating()
+    return aiv
   }()
   
   override func setupViews() {
@@ -29,6 +45,9 @@ class UserProfileDatasourceCell: DatasourceCell {
     
     addSubview(imageView)
     imageView.fillSuperview()
+    
+    addSubview(activityIndicatorView)
+    activityIndicatorView.fillSuperview()
   }
 }
 
